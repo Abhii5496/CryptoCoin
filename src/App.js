@@ -9,6 +9,7 @@ import SignUp from './Pages/SignUp'
 import axios from 'axios'
 import CoinPage from './Pages/CoinPage'
 import Footer from './components/Footer'
+import { AuthContextProvider } from './Conntext/AuthContext'
 
 const App = () => {
   const [coins, setCoins] = useState([])
@@ -24,6 +25,7 @@ const App = () => {
 
   return (
     <ThemeProvider>
+    <AuthContextProvider>
      <Navbar />
      <Routes>
       <Route path='/' element={<Home coins={coins} />} />
@@ -35,6 +37,7 @@ const App = () => {
       </Route>
      </Routes>
      <Footer/>
+    </AuthContextProvider>
     </ThemeProvider>
   )
 }
