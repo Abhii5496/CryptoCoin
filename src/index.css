@@ -2,33 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  @apply bg-primary text-primary
+:root {
+  @apply bg-primary text-primary;
 }
 
-.rounded-div{
-  @apply border border-secondary rounded-2xl shadow-xl bg-primary px-2 max-w-[1140px] w-full mx-auto 
+.rounded-div {
+  @apply border border-secondary rounded-2xl shadow-xl bg-primary px-2 max-w-[1140px] w-full mx-auto;
 }
 
-
-.dark{
-  --color-bg-primary: #2d3748;
+.dark {
+  --color-bg-primary: #1b1e25;
   --color-bg-secondary: #283141;
   --color-text-primary: #dbdbdb;
   --color-text-secondary: #2d3748;
-  --color-text-accent:#81e6d9;
-  --color-bg-input:#4a5361;
-  --color-bg-button:#81e6d9;
-
+  --color-text-accent: #81e6d9;
+  --color-bg-input: #4a5361;
+  --color-bg-button: #81e6d9;
 }
 
-.light{
-  --color-bg-primary: white;
+.light {
+  --color-bg-primary: rgb(225, 225, 225);
   --color-bg-secondary: #edf2f7;
   --color-text-primary: #2d3748;
   --color-text-secondary: #4a5568;
-  --color-text-accent:#2b6cb0;
-  --color-bg-input:#edf2f7;
-  --color-bg-button:#2b6cb0;
+  --color-text-accent: #2b6cb0;
+  --color-bg-input: #edf2f7;
+  --color-bg-button: #2b6cb0;
+}
 
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 50%;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    43deg,
+    #1133d8 0%,
+    #d20cc5 46%,
+    #d6900e 100%
+  );
+  border-radius: 100vw;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* color of the scrollbar thumb on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent; /* thumb color, track color */
 }
