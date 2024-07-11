@@ -4,14 +4,15 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // const firebaseConfig = {
-//   apiKey: process.env.REACT_APP_API_KEY,
-//   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-//   projectId:process.env.REACT_APP_PROJECT_ID,
-//   storageBucket: process.env.REACT_APP_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_MSG_SENDER,
-//   appId: process.env.REACT_APP_ID,
-//   measurementId: process.env.REACT_APP_ID
+//   apiKey: "AIzaSyCO2lJftELl7MYE90YMzqdx9asDOX7Hfz4",
+//   authDomain: "cart-app-2053c.firebaseapp.com",
+//   projectId: "cart-app-2053c",
+//   storageBucket: "cart-app-2053c.appspot.com",
+//   messagingSenderId: "130354326370",
+//   appId: "1:130354326370:web:fffb3bd0e430b4ed2fda3b",
+//   measurementId: "G-93TMNZVRSD",
 // };
+
 const firebaseConfig = {
   apiKey: "AIzaSyCiMtLRN6-d5XY6EiYJZugkuq5hi8lO2R8",
   authDomain: "cryptocoin-dd631.firebaseapp.com",

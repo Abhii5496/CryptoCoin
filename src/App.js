@@ -11,6 +11,8 @@ import CoinPage from "./Pages/CoinPage";
 import Footer from "./components/Footer";
 import { AuthContextProvider } from "./Conntext/AuthContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ProtectedRoute from "./ProtectedRoute";
+import PublicRoute from "./PublicRoute";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -22,9 +24,18 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/account" element={<Account />} />
+            <Route
+              path="/signin"
+              element={<PublicRoute component={Signin} />}
+            />
+            <Route
+              path="/signup"
+              element={<PublicRoute component={SignUp} />}
+            />
+            <Route
+              path="/account"
+              element={<ProtectedRoute component={Account} />}
+            />
             <Route path="/coin/:coinId" element={<CoinPage />}>
               <Route path=":coinId" />
             </Route>

@@ -29,14 +29,19 @@ const Trending = () => {
             >
               <div className="flex w-full items-center justify-between">
                 <div className="flex">
-                  <img className="mr-4 " src={coin.item.small} alt="" />
+                  <img
+                    loading="lazy"
+                    className="mr-4 "
+                    src={coin.item.small}
+                    alt=""
+                  />
                   <div>
                     <p className="font-bold">{coin.item.name}</p>
                     <p>{coin.item.symbol}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <img className="w-4 mr-2" src="" alt="" />
+                  <img loading="lazy" className="w-4 mr-2" src="" alt="" />
                   <p>{coin.item.price_btc.toFixed(7)}</p>
                 </div>
               </div>

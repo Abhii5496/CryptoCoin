@@ -5,8 +5,8 @@ import ToogleTheme from "./ToogleTheme";
 
 const Footer = () => {
   return (
-    <div className="rounded-div mt-8 pt-8 text-primary">
-      <div className="grid md:grid-cols-2">
+    <div className="rounded-div py-3 text-primary mb-4">
+      {/* <div className="grid md:grid-cols-2">
         <div className="flex justify-evenly w-full md:max-w-[300px] uppercase ">
           <div>
             <h2 className="font-bold"> Support</h2>
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      </div>
+      </div> */}
       <p className="text-center py-4">Powered By CryptoCoin</p>
     </div>
   );

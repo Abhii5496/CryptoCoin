@@ -17,11 +17,7 @@ const CoinItem = ({ coin }) => {
       setSavedCoin(true);
       await updateDoc(coinPath, {
         watchList: arrayUnion({
-          id: coin.id,
-          name: coin.name,
-          image: coin.image,
-          rank: coin.market_cap_rank,
-          symbol: coin.symbol,
+          coin,
         }),
       });
     } else {
@@ -31,7 +27,10 @@ const CoinItem = ({ coin }) => {
 
   return (
     <tr className="h-[80px] border-b overflow-hidden last:border-none ">
-      <td onClick={saveCoin}>
+      <td
+        onClick={saveCoin}
+        className="cursor-pointer hover:scale-125 duration-300"
+      >
         {savedCoin ? <AiFillStar /> : <AiOutlineStar />}
       </td>
       <td>{coin.market_cap_rank}</td>
@@ -42,6 +41,7 @@ const CoinItem = ({ coin }) => {
               className="w-6 mr-2 rounded-full"
               src={coin.image}
               alt={coin.id}
+              loading="lazy"
             />
             <p className="hidden sm:table-cell">{coin.name}</p>
           </div>
@@ -71,7 +71,9 @@ const CoinItem = ({ coin }) => {
       </td>
       <td>
         <Sparklines data={coin.sparkline_in_7d.price}>
-          <SparklinesLine color="red" />
+          <SparklinesLine
+            color={coin.price_change_percentage_24h > 0 ? "green" : "red"}
+          />
         </Sparklines>
       </td>
     </tr>
